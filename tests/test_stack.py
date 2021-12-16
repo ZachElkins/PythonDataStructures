@@ -4,7 +4,7 @@ from data_structures.stack import Stack
 
 def test_stack_init():
     stack = Stack()
-    assert type(stack) == Stack
+    assert isinstance(stack, Stack)
 
 
 def test_stack_empty():
@@ -35,6 +35,8 @@ def test_stack_peek_lookup_error():
 def test_stack_pop():
     stack = Stack()
     stack.push(1)
+    stack.push(2)
+    assert stack.pop() == 2
     assert stack.pop() == 1
     assert stack.empty() is True
 

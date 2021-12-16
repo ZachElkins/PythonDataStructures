@@ -1,3 +1,4 @@
+
 class Stack:
     """
     A class for a first-in-last-out data structure.
@@ -16,14 +17,14 @@ class Stack:
 
     def __init__(self):
         """ Initializes the stack to an empty list."""
-        self.stack = []
+        self.items = []
 
     def push(self, item):
         """ Adds a new item to the top of the stack.
         :param item: The new item to add to the stack.
         :return:
         """
-        self.stack = [item] + self.stack
+        self.items = [item] + self.items
 
     def pop(self):
         """
@@ -32,8 +33,8 @@ class Stack:
         """
         if self.empty():
             raise LookupError("The stack is empty.")
-        item = self.stack[0]
-        self.stack = self.stack[1:]
+        item = self.items[0]
+        self.items = self.items[1:]
         return item
 
     def peek(self):
@@ -44,7 +45,7 @@ class Stack:
         """
         if self.empty():
             raise LookupError("The stack is empty.")
-        return self.stack[0]
+        return self.items[0]
 
     def empty(self):
         """
@@ -52,4 +53,4 @@ class Stack:
             Returns True if the stack is empty, otherwise False.
         :return:
         """
-        return len(self.stack) == 0
+        return len(self.items) == 0
