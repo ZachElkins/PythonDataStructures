@@ -3,7 +3,8 @@ from data_structures.stack import Stack
 
 class Queue(Stack):
     """
-    A class for a first-in-first-out data structure. Implemented using the data_structures.stack.Stack class.
+    A class for a first-in-first-out data structure.
+    Implemented using the data_structures.stack.Stack class.
     ...
     Methods
     _______
