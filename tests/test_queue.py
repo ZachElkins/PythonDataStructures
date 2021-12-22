@@ -1,6 +1,4 @@
-import pytest
 from data_structures.queue import Queue
-
 
 def test_queue_init():
     queue = Queue()
