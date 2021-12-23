@@ -45,3 +45,12 @@ def test_stack_pop_lookup_error():
     stack = Stack()
     with pytest.raises(LookupError):
         _ = stack.pop()
+
+
+def test_stack_size():
+    stack = Stack()
+    assert stack.size() == 0
+    stack.push(1)
+    assert stack.size() == 1
+    stack.pop()
+    assert stack.size() == 0

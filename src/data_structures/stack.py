@@ -13,23 +13,25 @@ class Stack:
         Returns the item on top of the stack.
     empty():
         Returns True if the stack is empty, otherwise False.
+    size():
+        Returns size of the stack.
     """
 
     def __init__(self):
-        """ Initializes the stack to an empty list."""
+        """Initializes the stack to an empty list."""
         self.items = []
 
     def push(self, item):
-        """ Adds a new item to the top of the stack.
+        """
+        Adds a new item to the top of the stack.
         :param item: The new item to add to the stack.
-        :return:
         """
         self.items = [item] + self.items
 
     def pop(self):
         """
         Removes and returns the top item the stack.
-        :return:
+        :return: Returns the next item in the stack.
         """
         if self.empty():
             raise LookupError("The stack is empty.")
@@ -39,9 +41,8 @@ class Stack:
 
     def peek(self):
         """
-        peek():
-            Returns the item on top of the stack.
-        :return:
+        Returns the item on top of the stack.
+        :return: The next item in the stack.
         """
         if self.empty():
             raise LookupError("The stack is empty.")
@@ -49,8 +50,14 @@ class Stack:
 
     def empty(self):
         """
-        empty():
-            Returns True if the stack is empty, otherwise False.
-        :return:
+        Returns True if the stack is empty, otherwise False.
+        :return: True if empty, False otherwise.
         """
         return len(self.items) == 0
+
+    def size(self):
+        """
+        Returns the size of the stack
+        :return: Size of the stack
+        """
+        return len(self.items)

@@ -16,6 +16,8 @@ class Queue(Stack):
         Returns the item from the start of the queue.
     empty():
         Returns True if the queue is empty, otherwise False.
+    size():
+        Returns size of the queue.
     """
 
     def __init__(self):
@@ -25,6 +27,5 @@ class Queue(Stack):
     def push(self, item):
         """ Adds a new item to the top of the queue.
         :param item: The new item to add to the queue.
-        :return:
         """
         self.items = self.items + [item]
