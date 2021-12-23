@@ -9,11 +9,22 @@ def head_node():
 
 def test_tree_node_init():
     node = TreeNode(1)
+    assert isinstance(node, TreeNode)
 
 
 def test_tree_node_init_error():
     with pytest.raises(TypeError):
-        node = TreeNode()
+        TreeNode()
+
+
+def test_tree_node_insert():
+    node = TreeNode(2)
+    node.insert(1)
+    node.insert(3)
+    node.insert(0)
+    node.insert(4)
+    assert node.left.data == 1
+    assert node.right.data == 3
 
 
 def test_tree_node_left(head_node):
@@ -89,5 +100,3 @@ def test_tree_node_ge(head_node):
 def test_tree_node_ge_error(head_node):
     with pytest.raises(TypeError):
         assert head_node >= 0
-
-
