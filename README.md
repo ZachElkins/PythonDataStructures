@@ -2,4 +2,4 @@
 
 ![Tests](https://github.com/ZachElkins/PythonDataStructures/actions/workflows/tests.yml/badge.svg)
 
-A basic library to implement varous data structures in Python
+A basic library to implement various data structures in Python
