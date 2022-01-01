@@ -16,6 +16,8 @@ def base_heap():
 def test_heap_init():
     basic_heap = Heap()
     init_list_heap = Heap([9, 8, 7, 5, 1, 2])
+    assert isinstance(Heap, basic_heap)
+    assert isinstance(Heap, init_list_heap)
 
 
 def test_heap_push():
