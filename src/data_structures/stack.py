@@ -17,9 +17,17 @@ class Stack:
         Returns size of the stack.
     """
 
-    def __init__(self):
+    def __init__(self, items=None):
         """Initializes the stack to an empty list."""
-        self.items = []
+        if items is None:
+            items = []
+
+        if not isinstance(items, list):
+            raise TypeError(
+                f"Initializer list must be of type list, not {type(items)}"
+            )
+
+        self.items = items
 
     def push(self, item):
         """
