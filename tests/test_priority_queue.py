@@ -1,15 +1,8 @@
 from data_structures.priority_queue import PriorityQueue
-from dataclasses import dataclass
-
-
-@dataclass
-class Rect:
-    width: int
-    height: int
 
 
 def test_priority_queue_init():
-    pq = PriorityQueue(lambda x: x.height)
+    pq = PriorityQueue(lambda x: x[1])
     assert isinstance(pq, PriorityQueue)
 
 
@@ -22,10 +15,10 @@ def test_priority_queue_init_from_list():
 
 
 def test_priority_queue_push():
-    pq = PriorityQueue(lambda x: x.height)
-    small = Rect(width=1, height=1)
-    medium = Rect(width=1, height=2)
-    large = Rect(width=1, height=3)
+    pq = PriorityQueue(lambda x: x[1])
+    small = [3, 1]
+    medium = [2, 3]
+    large = [1, 5]
     pq.push(large)
     pq.push(small)
     pq.push(medium)
