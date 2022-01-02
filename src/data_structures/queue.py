@@ -20,10 +20,6 @@ class Queue(Stack):
         Returns size of the queue.
     """
 
-    def __init__(self):
-        """ Initializes the queue to an empty list."""
-        Stack.__init__(self)
-
     def push(self, item):
         """ Adds a new item to the top of the queue.
         :param item: The new item to add to the queue.

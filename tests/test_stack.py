@@ -7,6 +7,17 @@ def test_stack_init():
     assert isinstance(stack, Stack)
 
 
+def test_stack_init_from_list():
+    stack = Stack([1, 2, 3])
+    assert isinstance(stack, Stack)
+    assert stack.size() == 3
+
+
+def test_stack_init_error():
+    with pytest.raises(TypeError):
+        _ = Stack((1, 2, 3))
+
+
 def test_stack_empty():
     stack = Stack()
     assert stack.empty() is True
