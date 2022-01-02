@@ -52,8 +52,7 @@ class Graph:
     def bfs(self, start):
         if not self.contains(start):
             raise ValueError(
-                "One or both of the vertices provided"
-                "are not present in the graph."
+                "The vertex provided is not present in the graph."
             )
         distance = {start: 0}
         current = start
@@ -87,3 +86,10 @@ class Graph:
             return dist
 
         return distances[target]
+
+    def neighbors(self, vertex):
+        if not self.contains(vertex):
+            raise ValueError(
+                "The vertex provided is not present in the graph."
+            )
+        return self.adj_list[vertex]

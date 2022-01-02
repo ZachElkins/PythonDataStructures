@@ -84,3 +84,13 @@ def test_graph_distance(basic_graph):
 def test_graph_distance_error(basic_graph):
     with pytest.raises(ValueError):
         basic_graph.distance("A", "L")
+
+
+def test_graph_neighbors(basic_graph):
+    assert basic_graph.neighbors("A") == ["B", "F"]
+    assert basic_graph.neighbors("G") == []
+
+
+def test_graph_neighbors_err(basic_graph):
+    with pytest.raises(ValueError):
+        basic_graph.neighbors("L")
