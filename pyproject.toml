@@ -7,7 +7,7 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [tool.pytest.ini-options]
-addopts = "--cov=dat_structures"
+addopts = "--cov=data_structures"
 testpaths = [
     "tests",
 ]
@@ -25,3 +25,7 @@ warn_return_any = true
 warn_unreachable = true
 warn_unused_configs = true
 no_implicit_reexport = true
+
+[tool.black]
+line-length = 80
+target-version = ['py37']
